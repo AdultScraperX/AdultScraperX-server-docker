@@ -7,8 +7,8 @@ services:
     container_name: adultscraperx-server
     ports:
       - 9999:9999
-    #volumes:
-      #- ./config:/home/adultScraperX/AdultScraperX-server/config
+    volumes:
+      - ./config.py:/home/adultScraperX/AdultScraperX-server/config/config.py
     links:
       - adultscraperx-mongo-db:adultscraperx-mongo-db
     depends_on:

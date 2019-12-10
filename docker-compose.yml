@@ -1,9 +1,7 @@
 version: '3'
 services:
   adultscraperx:
-    build: 
-      context: .
-      dockerfile: ./build/Dockerfile
+    image: chunsiyang/adult_scraperx_server
     container_name: adultscraperx-server
     ports:
       - 9999:9999

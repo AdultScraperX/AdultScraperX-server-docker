@@ -1,0 +1,33 @@
+version: '3'
+services:
+  adultscraperx:
+    build: 
+      context: .
+      dockerfile: ./build/Dockerfile
+    container_name: adultscraperx-server
+    ports:
+      - 9999:9999
+    #volumes:
+      #- ./config:/home/adultScraperX/AdultScraperX-server/config
+    links:
+      - adultscraperx-mongo-db:adultscraperx-mongo-db
+    depends_on:
+      - adultscraperx-mongo-db
+  adultscraperx-mongo-db:
+    image: mongo:latest
+    container_name: adultscraperx-mongo-db
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      TZ: Asia/Shanghai
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: adultscraperx
+    volumes:
+      - ./data/db:/data/db
+      - /etc/localtime:/etc/localtime
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"

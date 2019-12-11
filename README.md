@@ -1,6 +1,7 @@
 # AdultScraperX-server-docker
 AdultScraperX-server-docker  
-### QQ群：721786707
+### TG群：https://t.me/AdultScraperX
+
 ##使用docker 和 docker-compose 构建 AdultScraperX-server  
 ### 安装docker（如果已安装可跳过）
 CentOS

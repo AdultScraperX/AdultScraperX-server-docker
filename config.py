@@ -10,6 +10,9 @@ DEBUG = False
 # 服务端版本号
 SERVER_VERSION = 1.0
 
+# 精简模式(开启后关闭数据库相关功能)
+THIN_MODE = False
+
 # 是否开启用户认证
 USER_CHECK = False
 

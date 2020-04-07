@@ -1,7 +1,7 @@
 version: '3'
 services:
   adultscraperx:
-    image: chunsiyang/adult_scraperx_server
+    image: adultscraperx/adult_scraperx_server
     container_name: adultscraperx-server
     restart: always
     ports:
